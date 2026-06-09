@@ -1,20 +1,18 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
-
 ## How it works
 
-Explain how your project works
+The 8-bit SPI configuration register consists of a 
+shift register and an output latch. 
+
+The SPI interface shifts in the next value of the register when chip select (CS) is low (shifting is done MSB-first). Once CS is high, the register outputs update to the current value of the shift register (even if less/more than 8 clocks were received).
+
+The design also includes an asynchronous clear signal which is used to reset the state of the register to a default value. 
+
+The 8-bit parallel output of the register is accessible from the output pins.
+
+The IP is intended to be used to write configuration bits to future analog/mixed-signal designs with limited pin access.
 
 ## How to test
 
-Explain how to use your project
+By default, the register should read the value 0xAA. 
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+TODO: add a script to test the design.
