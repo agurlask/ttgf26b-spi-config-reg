@@ -10,6 +10,12 @@ CSN_SETUP_NS = 50
 CSN_HOLD_NS  = 50
 SETTLE_NS    = 200
 
+# Bit positions within ui_in
+SCLK_BIT = 0
+MOSI_BIT = 1
+CSN_BIT  = 2
+CLR_BIT  = 3
+
 def set_ui_in(dut, sclk=0, mosi=0, csn=1, clr=0):
     """Drive ui_in from named SPI signals for readability."""
     dut.ui_in.value = (
