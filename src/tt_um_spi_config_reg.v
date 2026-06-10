@@ -1,6 +1,6 @@
 // tt_um_spi_config_reg.v
 //
-// Tiny Tapeout GF wrapper for spi_config_reg.
+// Tiny Tapeout wrapper for spi_config_reg.
 //
 // Pin mapping:
 //
